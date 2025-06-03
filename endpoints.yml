@@ -11,7 +11,7 @@
 # https://rasa.com/docs/rasa-pro/concepts/custom-actions
 
 action_endpoint:
-  url: "https://actions-ayambakarnusantara-1013559069503.asia-southeast1.run.app/webhook"
+  url: "http://action_server:5055/webhook"
 
 # action_endpoint:
 #   url: "http://localhost:5055/webhook"
