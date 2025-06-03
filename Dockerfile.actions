@@ -2,9 +2,13 @@ FROM europe-west3-docker.pkg.dev/rasa-releases/rasa-pro/rasa-pro:3.12.14
 
 WORKDIR /app
 
-COPY . /app
+COPY requirements-actions.txt .
 
 USER root
+
+RUN pip install --no-cache-dir -r requirements-actions.txt
+
+COPY . /app
 
 EXPOSE 5055
 
