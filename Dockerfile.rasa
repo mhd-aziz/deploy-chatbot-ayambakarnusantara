@@ -1,0 +1,11 @@
+FROM europe-west3-docker.pkg.dev/rasa-releases/rasa-pro/rasa-pro:3.12.14
+
+WORKDIR /app
+
+COPY . /app
+
+USER root
+
+EXPOSE 5005
+
+CMD ["rasa", "run", "--enable-api", "--cors", "*", "--debug", "--port", "$PORT"]
